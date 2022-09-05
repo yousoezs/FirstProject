@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Metrics;
+using static System.Console;
 
 namespace Labb_1
 {
@@ -13,7 +14,20 @@ namespace Labb_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string input = "29535123p48723487597645723645";
+            var temp = 0;
+            for(int i = 0; i < input.Length; i++)
+            {
+                Write(input[i]);
+                for(int j = 0; j < input.Length + 1; j++)
+                {
+                    if (input[i] == input[j + 1])
+                    {
+                        temp = input[j + 1];
+                        input[j + 1] = input[j];
+                    }
+                }
+            }
         }
     }
 }
