@@ -1,87 +1,45 @@
 ﻿using System;
+using System.Reflection.Emit;
+using System.Runtime.ConstrainedExecution;
 using static System.Console;
-
+using static System.Net.Mime.MediaTypeNames;
 namespace ConsoleApp3
 {
     internal class Program
     {
+        //Gör ett program som ber användaren mata in en text.
+        //Be sedan användaren mata in en sträng som är en del av den första texten. 
+        //Skriv ut hela texten med den del man angav markerad i en annan färg. 
+        //Ex.Användare matar in “abcdefghijklmnopqrstuvxyz”, och sedan “defg”. 
+        //Programmet ska då skriva ut: abcdefghijklmnopqrstuvxyz
         static void Main(string[] args)
         {
-            string text = "Hejsan svejsan";
-            char[] textArr = new char[] { 'H', 'e', 'j', 's', 'a', 'n', ' ', 's', 'v', 'e', 'j', 's', 'a', 'n' };
+            WriteLine("Mata in en text!");
+            //Här ber vi användaren mata in en text med metoden ReadLine()
+            string input1 = ReadLine();
+            WriteLine("Mata nu in en sträng från din text!");
+            string input2 = ReadLine();
 
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (text[i] == 'e')
-                {
-                    ForegroundColor = ConsoleColor.Red;
-                }
-                else if (text[i] == 's')
-                {
-                    ForegroundColor = ConsoleColor.Yellow;
-                }
-                else if(text[i] == 'n')
-                {
-                    ForegroundColor= ConsoleColor.Green;
-                }
-                Write(text[i]);
-                ForegroundColor = ConsoleColor.White;
-            }
+            //Här skapar vi en int variabel som ska ta reda på första positionen i input2.
+            int index1 = input1.IndexOf(input2);
+            //var counter är skapad för att få själva längden av input2 för att veta hur lång den är i siffer värde.
+            var counter = input2.Length;
+            //Här skriver vi ut första delen av texten, med start position 0 och fram till första position av indexet vi hittade i index1.
+            Write(input1.Substring(0, index1));
+            //Här ändrar vi färg till grönt!
+            ForegroundColor = ConsoleColor.Green;
+            //Här skriver vi att datorn ska starta från första positionen vi hittade förut, samt sätta ihop ordet vi har i counter.
+            //Med första indexet, - första indexet också
+            Write(input1.Substring(index1, counter + index1 - index1));
+            ForegroundColor = ConsoleColor.White;
+            //Här tar vi reda på det sista indexet med hjälpa av lite matte.
+            //vi tar input1.Length, längden av första texten - inom parantes (index1 + counter) för att vi måste ta första position
+            //samt ordet vi har efterhand - hela längden av input1. för att få ut rätt ord i sista index.
+            var lastIndex1 = input1.Length - (index1 + counter);
+            //Här skriver vi ut nu, första position hittad + counter, alltså det färgade ordet. samt sista ordet med hjälp av lastIndex1.
+            Write(input1.Substring(index1 + counter, lastIndex1));
 
-            //string ordEtt = string.Empty;
-            //string ordTvå = string.Empty;
-
-            //bool hittadeOrdEtt = false;
-
-            //for (int i = textArr.Length - 1; i >= 0; i--)
-            //{
-            //    if (textArr[i] == ' ')
-            //    {
-            //        hittadeOrdEtt = true;
-            //    }
-
-            //    else if (hittadeOrdEtt)
-            //    {
-            //        ordTvå += textArr[i];
-            //    }
-            //    else
-            //    {
-            //        ordEtt += textArr[i];
-            //    }
-            //}
-
-            //string omvändEtt = string.Empty;
-            //string omvändTvå = string.Empty;
-
-            //for (int i = ordEtt.Length - 1; i >= 0; i--)
-            //{
-            //    omvändEtt += ordEtt[i];
-            //}
-            //for (int i = ordTvå.Length - 1; i >= 0; i--)
-            //{
-            //    omvändTvå += ordTvå[i];
-            //}
-
-            //WriteLine(ordEtt);
-            //WriteLine(omvändEtt);
-            //WriteLine(ordTvå);
-            //WriteLine(omvändTvå);
-
-            //ForegroundColor = ConsoleColor.Green;
-            //WriteLine("Skriv något!");
-            //var input = ReadLine();
-            //ForegroundColor = ConsoleColor.Red;
-            //string inputLower = input.ToLower();
-
-            //if (inputLower == "hej")
-            //{
-            //    WriteLine(inputLower);
-            //}
-            //else
-            //{
-            //    WriteLine("Du skrev fel!");
-            //}
-
+            ReadKey();
         }
     }
 }
