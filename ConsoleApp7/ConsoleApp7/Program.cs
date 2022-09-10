@@ -15,7 +15,10 @@ namespace ConsoleApp7
         //#######
         static void Main(string[] args)
         {
-            DrawBox(7, 4);
+            WriteLine("Skriv in 2 tal, första är bredd, andra är längd: ");
+            int width = int.Parse(ReadLine());
+            int height = int.Parse(ReadLine());
+            DrawBox(width, height);
         }
         static int DrawBox(int width, int height)
         {
