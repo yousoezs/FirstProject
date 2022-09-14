@@ -65,12 +65,11 @@ namespace Game
                     }
                     WriteLine();
                 }
-                //Här skapar vi en while loop för rörelse av användaren.
-                SetCursorPosition(playerX, playerY);
                 CursorVisible = false;
 
                 //Här skapar vi själva spelaren som en variabel.
                 var player = bigBox[playerIndex[0], playerIndex[1]];
+                //Här skapar vi en while loop för rörelse av användaren.
                 //en while loop för att kolla ifall fel knapp trycks in så stängs konsolen av.
                 while (!wrongKey)
                 {
