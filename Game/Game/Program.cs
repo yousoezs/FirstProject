@@ -30,8 +30,6 @@ namespace Game
                 int heightMiddle = height / 2;
 
                 int[] playerIndex = new int[2] { heightMiddle, widthMiddle };
-                int playerX = widthMiddle;
-                int playerY = heightMiddle;
                 bool wrongKey = false;
 
                 for (int i = 0; i < height; i++)
