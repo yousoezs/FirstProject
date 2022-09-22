@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Diagnostics.Metrics;
+using System.Reflection.Metadata;
 using static System.Console;
 
 namespace Game
 {
-    //Använd DrawBox-metoden i föregående uppgift för att rita en box.
-    //Placera sedan ett @ i mitten av boxen.Om man använder piltangenterna ska man kunna flytta runt @.
-    //När den kommer till kanten av boxen så ska den inte kunna gå längre åt det hållet.Hint:
-    //För att flytta @ behöver du skriva ‘-’ på dess tidigare position och ‘@’ på den nya positionen.
-    //Spara bredd och höjd på boxen så du vet när den ska stanna.
+//Skriv om DrawBox så den istället returnerar en 2D-array av char med tecknen som den tidigare skrev ut på displayen.
+//Man ska också kunna mata in en tredje parameter för antal slumpade ‘#’.
+//Om man anger t.ex 5 så ska 5 stycken extra ‘#’ slumpas ut på random ställen inne i boxen.
+//Skriv sedan en annan metod som tar och ritar ut arrayen på skärmen.
+//Fixa så man kan flytta runt @ med piltangenterna.
+//Jämför positionen mot arrayen och gör så man inte kan gå på någon ‘#’.
     internal class Program
     {
         static void Main(string[] args)
         {
             //Här skriver användaren in 2 värden för att rita ut en box.
-            int width = int.Parse(ReadLine());
-            int height = int.Parse(ReadLine());
-            DrawBox(width, height);
+            DrawBox(80, 40);
         }
         static void DrawBox(int width, int height)
         {

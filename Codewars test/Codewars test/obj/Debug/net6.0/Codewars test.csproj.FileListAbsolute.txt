@@ -1,0 +1,15 @@
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\bin\Debug\net6.0\Codewars test.exe
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\bin\Debug\net6.0\Codewars test.deps.json
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\bin\Debug\net6.0\Codewars test.runtimeconfig.json
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\bin\Debug\net6.0\Codewars test.dll
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\bin\Debug\net6.0\Codewars test.pdb
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.csproj.AssemblyReference.cache
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.AssemblyInfoInputs.cache
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.AssemblyInfo.cs
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.csproj.CoreCompileInputs.cache
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.dll
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\refint\Codewars test.dll
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.pdb
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\Codewars test.genruntimeconfig.cache
+C:\Users\Toni Skoro\Documents\GitHub\FirstProject\Codewars test\Codewars test\obj\Debug\net6.0\ref\Codewars test.dll
