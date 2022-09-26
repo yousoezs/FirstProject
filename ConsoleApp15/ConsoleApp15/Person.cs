@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,15 +16,29 @@ namespace ConsoleApp15
     {
         private string _firstName;
         private string _lastName;
-        private string _name;
+        private readonly string _name;
 
         public Person(string FirstName, string LastName)
         {
-            FirstName = _firstName;
-            LastName = _lastName;
+            _name = Names(FirstName, LastName);
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Name { get; set; }
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+        }
+
+        public string Names(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+
+            return FirstName + " " + LastName;
+        }
     }
 }

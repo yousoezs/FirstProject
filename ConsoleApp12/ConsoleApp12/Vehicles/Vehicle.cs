@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp12
+﻿namespace ConsoleApp12.Vehicles
 {
-    public abstract class Vehicle
+    public abstract class Vehicle : IMakeNoise
     {
 		private int _topSpeed;
 
@@ -20,7 +14,7 @@ namespace ConsoleApp12
 			Console.WriteLine("WROOOM");
 		}
 
-        public void PrintTopSpeed()
+		public void PrintTopSpeed()
         {
 			Console.WriteLine(TopSpeed);
         }

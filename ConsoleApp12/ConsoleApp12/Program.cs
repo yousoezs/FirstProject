@@ -1,4 +1,8 @@
-﻿namespace ConsoleApp12
+﻿using System.Numerics;
+using ConsoleApp12.Vehicles;
+using ConsoleApp12.Animals;
+
+namespace ConsoleApp12
 {
     internal class Program
     {
@@ -6,7 +10,7 @@
         {
             var car = new Car();
             var mc = new MotorCycle();
-            var vehicle = new Vehicle();
+            var vehicles = new List<Vehicle>();
 
             car.TopSpeed = 200;
             car.NumberOfDoors = 4;
@@ -16,17 +20,34 @@
             mc.HandLedBarStyle = "normal";
             mc.MakeSound();
 
-            vehicle.TopSpeed = 200;
-            vehicle.MakeSound();
-
-            var vehicles = new List<Vehicle>();
-            vehicles.Add(car);
-            vehicles.Add(mc);
-            vehicles.Add(vehicle);
+            var plane = new Airplane();
+            plane.TopSpeed = 1000;
             
-            foreach(var s in vehicles)
+
+            var zoe = new Dog();
+            var wanda = new Fish();
+            var orville = new Bird();
+
+            var animals = new List<Animal>();
+
+            animals.Add(zoe);
+            animals.Add(wanda);
+
+            var noiseMakers = new List<IMakeNoise>();
+
+            noiseMakers.AddRange(vehicles);
+            noiseMakers.AddRange(animals);
+            foreach (var noiseMaker in noiseMakers)
             {
-                s.MakeSound();
+                noiseMaker.MakeSound();
+            }
+
+            var flyers = new List<IFly>();
+            flyers.Add(orville);
+            flyers.Add(plane);
+            foreach (var flyer in flyers)
+            {
+                flyer.Fly();
             }
         }
     }

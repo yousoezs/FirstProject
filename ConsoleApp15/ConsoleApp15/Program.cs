@@ -10,10 +10,9 @@
         static void Main(string[] args)
         {
             Person persons = new Person("Toni", "Skoro");
-            persons.FirstName = "Toni ";
-            persons.LastName = "Skoro";
+            persons.FirstName = Console.ReadLine();
+            persons.LastName = Console.ReadLine();
 
-            persons.Name = persons.FirstName + persons.LastName;
             Console.WriteLine(persons.Name);
 
         }
