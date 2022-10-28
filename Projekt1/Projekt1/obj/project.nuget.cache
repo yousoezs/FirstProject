@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kEpMr9hBr0FtZ4cC1rWrNRDbUUWZI3peWzDwsjKmF8Xw9f6/rAcWm0UJkBfI4dv2wSzpg+qt3njBZp/aYOR3EA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Toni Skoro\\Documents\\GitHub\\FirstProject\\Projekt1\\Projekt1\\Projekt1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Toni Skoro\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

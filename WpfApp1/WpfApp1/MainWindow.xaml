@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Min Första App" Height="600" Width="800" MinHeight="200" MinWidth="200">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="Calculator" FontFamily="Consolas" FontSize="36">
+            Number...
+        </TextBlock>
+        <Button x:Name="MainButton" Height="30" Content="0" Click="Button_Click" Grid.Row="1" />
+        <Button x:Name="Button1" Height="30" Click="Button_Click" Content="1" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="Button2" Click="Button_Click" Height="30" Content="2" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name="Button3" Height="30" Content="3" Click="Button_Click" Grid.Row="1" Grid.Column="3"/>
+        <Button x:Name="Button4" Height="30" Content="4" Click="Button_Click" Grid.Row="2"/>
+        <Button x:Name="Button5" Height="30" Content="5" Click="Button_Click" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="Button6" Height="30" Content="6" Click="Button_Click" Grid.Row="2" Grid.Column="2"/>
+        <Button x:Name="Button7" Height="30" Content="7" Click="Button_Click" Grid.Row="3"/>
+        <Button x:Name="Button8" Height="30" Content="8" Click="Button_Click" Grid.Row="3" Grid.Column="1"/>
+        <Button x:Name="Button9" Height="30" Content="9" Click="Button_Click" Grid.Row="3" Grid.Column ="2"/>
+    </Grid>
+</Window>
